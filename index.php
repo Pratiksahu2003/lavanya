@@ -501,7 +501,12 @@ include __DIR__ . '/includes/navbar.php';
       <p class="lc-sub fade-up fade-up-d3" style="text-align:center;margin:0 auto;">Spaces we have transformed for India's most discerning brands and institutions.</p>
     </div>
     <?php
-    $clients = getDB()->query("SELECT * FROM premium_clients WHERE status = 1 ORDER BY display_order ASC, id ASC")->fetchAll();
+    $clients = [];
+    try {
+      $clients = getDB()->query("SELECT * FROM premium_clients WHERE status = 1 ORDER BY display_order ASC, id ASC")->fetchAll();
+    } catch (PDOException $e) {
+      error_log('LAVANYAA CREATION clients query: ' . $e->getMessage());
+    }
     if (empty($clients)) {
       $clients = [
         ['name' => 'The Oberoi', 'logo' => null],

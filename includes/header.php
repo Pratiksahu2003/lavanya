@@ -45,5 +45,12 @@ cartStart();
   <div id="lc-loader-line"></div>
   <div id="lc-loader-tag">Premium Furniture Services</div>
 </div>
+<script>
+(function () {
+  var loader = document.getElementById('lc-loader');
+  if (!loader) return;
+  setTimeout(function () { loader.classList.add('hide'); }, 2800);
+})();
+</script>
 <!-- Scroll Progress -->
 <div id="lc-progress"></div>
