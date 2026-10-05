@@ -5,9 +5,9 @@
  */
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'u225235608_lavanya');
-define('DB_USER', 'u225235608_lavanya');
-define('DB_PASS', 'Lavanya010');
+define('DB_NAME', 'u817968670_lavanya');
+define('DB_USER', 'u817968670_lavanya');
+define('DB_PASS', 'Uj@AKN6^d');
 define('DB_CHARSET', 'utf8mb4');
 
 define('BASE_URL', 'https://lavanyaacreation.in/');
